@@ -31,7 +31,7 @@ echo "Current FileName: ${SCRIPT_NAME}"
 echo "Current Script: ${SCRIPT_FILENAME}"
 
 if [ -n "${QUERY_STRING}" ] ; then 
-   cat  ./${QUERY_STRING}
+/usr/bin/curl -s http://www.csun.edu/engineering-computer-science/computer-science
 else
 echo "No specified query string was entered"
 /usr/bin/curl -s https://www.csun.edu/~steve/
