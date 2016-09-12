@@ -23,14 +23,18 @@
 
 #      Added a content type and a blank line
 
-echo "X-Cit-160: hello again steve!"
+echo "X-Cit-160: hello again Aria!"
 echo "Content-type: text/html"
 
 echo ""
-echo "Begin"
+echo "Current FileName: ${SCRIPT_NAME}"
+echo "Current Script: ${SCRIPT_FILENAME}"
 
 if [ -n "${QUERY_STRING}" ] ; then 
    cat  ./${QUERY_STRING}
+else
+echo "No specified query string was entered"
+/usr/bin/curl -s https://www.csun.edu/~steve/
 fi
 
 # Read the body -- if it is a post
