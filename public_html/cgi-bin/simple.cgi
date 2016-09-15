@@ -23,20 +23,17 @@
 
 #      Added a content type and a blank line
 
-
 echo "X-Cit-160: hello again Stranger!"
 echo "Content-type: text/html"
 
 echo ""
-echo "Current FileName: ${SCRIPT_NAME}"
-echo "Current Script: ${SCRIPT_FILENAME}"
+echo ""
 
-
-if [ -n "${QUERY_STRING}" ] ; then 
-/usr/bin/curl -s http://www.csun.edu/engineering-computer-science/computer-science
-else
+if [ -n "${QUERY_STRING}" ] ; then
+/usr/bin/curl -s http://www.csun.edu/currentstudents/
+else 
 echo "No specified query string was entered"
-/usr/bin/curl -s https://www.csun.edu/~steve/
+/usr/bin/curl -s http://www.csun.edu/~steve/
 fi
 
 # Read the body -- if it is a post
@@ -44,8 +41,6 @@ while read _post_line ; do
   echo ${_post_line} ";loop"
 done 
 echo $_post_line
-
-
 
 
 exit 0
