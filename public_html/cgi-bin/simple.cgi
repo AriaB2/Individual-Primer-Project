@@ -23,12 +23,14 @@
 
 #      Added a content type and a blank line
 
-echo "X-Cit-160: hello again Aria!"
+
+echo "X-Cit-160: hello again Stranger!"
 echo "Content-type: text/html"
 
 echo ""
 echo "Current FileName: ${SCRIPT_NAME}"
 echo "Current Script: ${SCRIPT_FILENAME}"
+
 
 if [ -n "${QUERY_STRING}" ] ; then 
 /usr/bin/curl -s http://www.csun.edu/engineering-computer-science/computer-science
@@ -42,6 +44,8 @@ while read _post_line ; do
   echo ${_post_line} ";loop"
 done 
 echo $_post_line
+
+
 
 
 exit 0
